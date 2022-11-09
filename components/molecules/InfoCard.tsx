@@ -6,11 +6,11 @@ const InfoCard = (props: ILocation) => {
     const [select, setSelect] = useState(false);
 
     return (
-        <Flex gap={20} mt={10} cursor="pointer" shadow="0px 0px 5px 0px black" _hover={{"backgroundColor": "#ccc", "p": "6", "transition": "0.5s"}}>
+        <Flex gap={20} mt={10} flexDirection={["column","column","column", "row", "row"]} cursor="pointer" shadow="0px 0px 5px 0px black" _hover={{"backgroundColor": "#ccc", "p": "6", "transition": "0.5s"}}>
 
-            <Box pos="relative">
-                <Image src={props.img} alt={"location"} w="30vw" h="20vh" />
-            </Box>
+            <Flex justifyContent="center" pos="relative">
+                <Image src={props.img} alt={"location"} alignSelf={"center"} w={["60vw","60vw","60vw","30vw","30vw"]} h={["30vh","30vh","35vh","20vh","20vh"]} />
+            </Flex>
             <Grid mt={5} gap={15} flexDirection="column">
                 <Heading fontSize={25}>{props.location}</Heading >
                 <Button gridColumn={" 2 / 2"} gridRow="span 3" background="none" _hover={{"background": "none"}} onClick={() => setSelect(!select)}>{!select ?

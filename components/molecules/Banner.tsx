@@ -13,7 +13,7 @@ const Banner = () => {
                 objectFit="cover"
                 
             />
-            <Box position="absolute" top={200} left={350} textAlign="center">
+            <Box position="absolute" top={[200]} left={[70, 150, 300, 450, 550]} textAlign="center">
                 <Text fontSize={20} textShadow='dark-lg'>Not sure where to go? Perfect</Text>
                 <Button backgroundColor="white" boxShadow='dark-lg' fontWeight={"bold"} borderRadius={20} p={5}>I{"'"}m flexible</Button>
             </Box>
